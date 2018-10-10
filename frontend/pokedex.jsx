@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
+import Root from './root';
 
 import { fetchAllPokemon } from './util/api_util';
 import { receiveAllPokemon, requestAllPokemon } from './actions/pokemon_actions';
@@ -16,5 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.requestAllPokemon = requestAllPokemon;
   window.selectAllPokemon = selectAllPokemon;
 
-  ReactDOM.render(<h1>Pokedex</h1>, root);
+  ReactDOM.render(<Root store = { store }/>, root);
 });
